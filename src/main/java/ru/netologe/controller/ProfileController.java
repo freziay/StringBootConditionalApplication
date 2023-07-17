@@ -3,7 +3,7 @@ package ru.netologe.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.netologe.dao.SystemProfile;
+import ru.netologe.model.SystemProfile;
 
 @RestController
 @RequestMapping("/")
@@ -14,7 +14,7 @@ public class ProfileController {
         this.profile = profile;
     }
 
-    @GetMapping("profile")
+    @GetMapping("/profile")
     public String getProfile() {
         return profile.getProfile();
     }
